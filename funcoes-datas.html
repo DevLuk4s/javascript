@@ -42,6 +42,26 @@
 		document.write('<hr />')
 		document.write(data2.toString())
 
+		document.write('<br /><br /><br />')
+		//converter datas para algo que possamos calcular
+		document.write(data1.getTime())
+		document.write('<hr />')
+		document.write(data2.getTime())
+
+		//1 de janeiro de 1970
+
+		document.write('<br /><br /><br />')
+		//encontar a qtde de milissegundos entre data1 e data2
+		var milissegundos_entre_data = Math.abs(data1.getTime() - data2.getTime())
+		document.write(milissegundos_entre_data)
+
+		//1 dia tem 24 horas, cada hora tem 60 minutos, cada minuto tem 60 segundos e cada segundo tem 1000 milissegundos então quantos milissegundos existem em um dia?
+		var milissegundos_por_dia = (1*24*60*60*1000)
+		document.write('1 dia tem: ' + (1*24*60*60*1000) + ' milissegundos')
+
+		document.write('<br /><br /><br />')
+		document.write('Difereça de dia e de ' + Math.ceil(milissegundos_por_dia / milissegundos_entre_data))
+
 	</script>
 </head>
 <body>
